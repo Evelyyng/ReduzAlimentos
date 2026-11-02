@@ -35,39 +35,48 @@ COLUNAS = [
 # 2. IDENTIDADE VISUAL
 # =====================================================
 
+
 st.markdown("""
 <style>
 
-/* Fundo geral */
+/* FUNDO GERAL */
 .stApp {
-    background-color: #F3F7F1;
-    color: #254B36;
+    background-color: #F4F7F3;
+    color: #244B35;
 }
 
-/* Area principal */
 .block-container {
     padding-top: 2rem;
     padding-bottom: 3rem;
     max-width: 1400px;
 }
 
-/* Titulos */
-h1, h2, h3 {
+/* TITULOS E TEXTOS */
+h1, h2, h3, h4, h5, h6 {
     color: #214F37 !important;
     font-weight: 700 !important;
 }
 
-p, label, .stMarkdown {
+p, label, .stMarkdown,
+[data-testid="stCaptionContainer"] {
     color: #365B45;
 }
 
-/* Menu lateral */
+/* MENU LATERAL */
 section[data-testid="stSidebar"] {
-    background-color: #E4EEE1;
+    background-color: #E8F0E5;
     border-right: 1px solid #D2E1CE;
 }
 
-/* Cartoes de indicadores */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] label {
+    color: #214F37 !important;
+}
+
+/* INDICADORES */
 div[data-testid="stMetric"] {
     background-color: #FFFFFF;
     border: 1px solid #DCE8D8;
@@ -82,44 +91,92 @@ div[data-testid="stMetricLabel"] {
 
 div[data-testid="stMetricValue"] {
     color: #245B3C !important;
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
-/* Campos */
+div[data-testid="stMetricDelta"] {
+    color: #365B45 !important;
+}
+
+/* CAMPOS DE TEXTO */
 .stTextInput input,
 .stNumberInput input,
 .stDateInput input,
 .stTextArea textarea {
     background-color: #FFFFFF !important;
-    color: #254B36 !important;
-    border: 1px solid #C8D9C4 !important;
+    color: #214F37 !important;
+    border: 1px solid #BFD2BE !important;
     border-radius: 8px !important;
 }
 
-/* Selecao */
-.stSelectbox div[data-baseweb="select"] {
-    background-color: #FFFFFF;
-    border-radius: 8px;
+/* PLACEHOLDERS */
+.stTextInput input::placeholder,
+.stTextArea textarea::placeholder {
+    color: #718777 !important;
+    opacity: 1;
 }
 
-/* Botoes */
+/* CAMPOS DE SELEÇÃO */
+.stSelectbox div[data-baseweb="select"],
+.stMultiSelect div[data-baseweb="select"] {
+    background-color: #FFFFFF !important;
+    border-radius: 8px !important;
+}
+
+.stSelectbox div[data-baseweb="select"] *,
+.stMultiSelect div[data-baseweb="select"] * {
+    color: #214F37 !important;
+}
+
+/* OPÇÕES DOS MENUS */
+div[role="listbox"],
+div[role="option"] {
+    background-color: #FFFFFF !important;
+    color: #214F37 !important;
+}
+
+/* BOTÕES PRINCIPAIS */
 .stButton button,
-.stDownloadButton button {
+.stDownloadButton button,
+.stFormSubmitButton button {
     background-color: #34734F !important;
     color: #FFFFFF !important;
-    border: none !important;
+    border: 1px solid #34734F !important;
     border-radius: 9px !important;
-    font-weight: 600;
+    font-weight: 600 !important;
     padding: 0.55rem 1rem;
 }
 
-.stButton button:hover,
-.stDownloadButton button:hover {
-    background-color: #245B3C !important;
+/* TEXTO INTERNO DOS BOTÕES */
+.stButton button *,
+.stDownloadButton button *,
+.stFormSubmitButton button * {
     color: #FFFFFF !important;
 }
 
-/* Cartoes de conteudo */
+/* EFEITO AO PASSAR O MOUSE */
+.stButton button:hover,
+.stDownloadButton button:hover,
+.stFormSubmitButton button:hover {
+    background-color: #245B3C !important;
+    border-color: #245B3C !important;
+    color: #FFFFFF !important;
+}
+
+/* BOTÕES DESABILITADOS */
+.stButton button:disabled,
+.stDownloadButton button:disabled {
+    background-color: #A8BBAA !important;
+    color: #FFFFFF !important;
+}
+
+/* BOTÕES DE RÁDIO E CHECKBOX */
+.stRadio label,
+.stCheckbox label {
+    color: #214F37 !important;
+}
+
+/* CARTÕES DE CONTEÚDO */
 .cartao {
     background-color: #FFFFFF;
     border: 1px solid #DCE8D8;
@@ -128,26 +185,31 @@ div[data-testid="stMetricValue"] {
     margin-bottom: 15px;
 }
 
-/* Mensagens */
+/* MENSAGENS DO SISTEMA */
 div[data-testid="stAlert"] {
     border-radius: 10px;
 }
 
-/* Divisorias */
-hr {
-    border-color: #DCE8D8;
+div[data-testid="stAlert"] p {
+    color: inherit !important;
 }
 
-/* Tabela */
+/* TABELAS */
 div[data-testid="stDataFrame"] {
+    background-color: #FFFFFF;
     border: 1px solid #DCE8D8;
     border-radius: 10px;
     overflow: hidden;
 }
 
-/* Rodape */
+/* DIVISÓRIAS */
+hr {
+    border-color: #DCE8D8 !important;
+}
+
+/* RODAPÉ */
 .rodape {
-    color: #718777;
+    color: #718777 !important;
     font-size: 13px;
     text-align: center;
     padding-top: 20px;
