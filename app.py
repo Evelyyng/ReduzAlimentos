@@ -209,7 +209,7 @@ hr {
 
 /* RODAPÉ */
 .rodape {
-    color: #718777 !important;
+    color: #b7e4c7 !important;
     font-size: 13px;
     text-align: center;
     padding-top: 20px;
