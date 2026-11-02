@@ -391,7 +391,7 @@ limite = st.session_state.limite
 st.markdown(
     """
     <div style="
-        background: linear-gradient(110deg, #FFFFFF, #FFFFFF);
+        background: linear-gradient(110deg, #FFFFFF, #d8f3dc);
         padding: 28px;
         border-radius: 16px;
         margin-bottom: 25px;
