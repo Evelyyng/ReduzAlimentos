@@ -396,10 +396,10 @@ st.markdown(
         border-radius: 16px;
         margin-bottom: 25px;
     ">
-        <h1 style="color:white !important; margin:0;">
+        <h1 style="color:#FFFFFF !important; margin:0;">
             ReduzAlimentos
         </h1>
-        <p style="color:#E5F2E5 !important; margin-top:8px;">
+        <p style="color:#FFFFFF !important; margin-top:8px;">
             Monitoramento e prevenção do desperdício alimentar
         </p>
     </div>
