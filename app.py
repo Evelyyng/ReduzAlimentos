@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, label, .stMarkdown,
 [data-testid="stCaptionContainer"] {
-    color: #81b29a;
+    color: #365B45;
 }
 
 /* MENU LATERAL */
